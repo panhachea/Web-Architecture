@@ -1,18 +1,59 @@
-import React from 'react';
 
+// export default Index;
+import React, { Component } from "react";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+// import "./Login.css";
 
+export default class Index extends Component {
+  constructor(props) {
+    super(props);
 
-function Index() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-      </header>
+    this.state = {
+      
+    };
+  }
+  render() {
+    return (
+      <div className="Login">
+         <div>
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">@</InputGroupAddon>
+        <Input placeholder="username" />
+      </InputGroup>
+      <br />
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">
+          <InputGroupText>
+            <Input addon type="checkbox" aria-label="Checkbox for following text input" />
+          </InputGroupText>
+        </InputGroupAddon>
+        <Input placeholder="Check it out" />
+      </InputGroup>
+      <br />
+      <InputGroup>
+        <Input placeholder="username" />
+        <InputGroupAddon addonType="append">@example.com</InputGroupAddon>
+      </InputGroup>
+      <br />
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">
+          <InputGroupText>$</InputGroupText>
+          <InputGroupText>$</InputGroupText>
+        </InputGroupAddon>
+        <Input placeholder="Dolla dolla billz yo!" />
+        <InputGroupAddon addonType="append">
+          <InputGroupText>$</InputGroupText>
+          <InputGroupText>$</InputGroupText>
+        </InputGroupAddon>
+      </InputGroup>
+      <br />
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">$</InputGroupAddon>
+        <Input placeholder="Amount" min={0} max={100} type="number" step="1" />
+        <InputGroupAddon addonType="append">.00</InputGroupAddon>
+      </InputGroup>
     </div>
-  );
+      </div>
+    );
+  }
 }
-
-export default Index;
