@@ -1,16 +1,22 @@
 .App {
   text-align: center;
+  background:lightgray;
+  width:100%;
+  margin: 0 auto 0 auto;
+ 
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 98vh;
+  width: 50%;
+  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,10 +25,31 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h2{
+  top: 30px;
+}
+Input{
+  width: 250px;
+  height: 20px;
+  padding:5px;
+  float: right;
+  margin-top:15px;
+  
+}
+label{
+  float: left;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top:15px;
 }
 
+.btn-submit{
+  clear: both;
+  position: relative;
+  margin: 0 auto 0 auto;
+  padding: 5px;
+  width: 400px;
+  margin-top:15px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
